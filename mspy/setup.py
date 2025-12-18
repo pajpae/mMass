@@ -28,7 +28,7 @@ setup(
             "calculations",
             ["calculations.c"],
             include_dirs=[numpyInclude, pythonInclude],
-            libraries=["m"],
+            # libraries=["m"],
         )
     ],
 )

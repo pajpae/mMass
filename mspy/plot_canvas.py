@@ -133,7 +133,7 @@ class canvas(wx.Window):
 
         # draw buffer to screen
         dc = wx.BufferedPaintDC(self, self.plotBuffer)
-        self.quickRefresh(dc)
+        self.refresh()
 
     # ----
 
@@ -178,7 +178,8 @@ class canvas(wx.Window):
         """Escape mouse events when cursor leave out of the canvas."""
 
         dc = wx.BufferedDC(wx.ClientDC(self), self.plotBuffer)
-        self.quickRefresh(dc)
+        self.refresh()
+        self.rememberView()
 
         # escape mouse events
         self.escMouseEvents()
@@ -208,7 +209,7 @@ class canvas(wx.Window):
             return
 
         dc = wx.BufferedDC(wx.ClientDC(self), self.plotBuffer)
-        self.quickRefresh(dc)
+        self.refresh()
 
         # get starting coords for movement
         self.draggingStart = self.cursorPosition[:]
@@ -265,7 +266,7 @@ class canvas(wx.Window):
             return
 
         dc = wx.BufferedDC(wx.ClientDC(self), self.plotBuffer)
-        self.quickRefresh(dc)
+        self.refresh()
 
         # zoom plot
         if self.mouseEvent == "zoom":
@@ -371,7 +372,7 @@ class canvas(wx.Window):
         location = self.getCursorLocation()
 
         dc = wx.BufferedDC(wx.ClientDC(self), self.plotBuffer)
-        self.quickRefresh(dc)
+        self.refresh()
 
         # draw zoom box and set event
         if location == "plot" and self.mouseFnRMB == "zoom":
@@ -398,7 +399,6 @@ class canvas(wx.Window):
             return
 
         dc = wx.BufferedDC(wx.ClientDC(self), self.plotBuffer)
-        self.quickRefresh(dc)
 
         # zoom dragging
         if self.mouseEvent == "zoom":
@@ -469,7 +469,8 @@ class canvas(wx.Window):
         """Draw cursor on mouse motion."""
 
         dc = wx.BufferedDC(wx.ClientDC(self), self.plotBuffer)
-        self.quickRefresh(dc)
+        self.rememberView()
+        self.refresh()        
 
         # store cursor positions
         self.cursorPosition[0], self.cursorPosition[1] = self.getXY(evt)
@@ -703,7 +704,6 @@ class canvas(wx.Window):
         # scale y axis
         elif key == wx.WXK_UP or key == wx.WXK_DOWN:
             maxY += (maxY - minY) * self.properties["yScaleFactor"] * direction
-
         # fullsize
         elif key == wx.WXK_HOME and evt.ControlDown():
             minX = rangeXmin

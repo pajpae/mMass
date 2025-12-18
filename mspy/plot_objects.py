@@ -22,7 +22,7 @@ import copy
 
 # load modules
 from . import mod_signal
-import calculations
+from mspy import calculations
 
 
 # MAIN PLOT OBJECTS

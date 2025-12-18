@@ -2,14 +2,14 @@
 <mMassConfig version="1.0">
 
   <main>
-    <param name="appWidth" value="964" type="int" />
-    <param name="appHeight" value="581" type="int" />
+    <param name="appWidth" value="1050" type="int" />
+    <param name="appHeight" value="620" type="int" />
     <param name="appMaximized" value="0" type="int" />
     <param name="layout" value="default" type="str" />
     <param name="documentsWidth" value="195" type="int" />
-    <param name="documentsHeight" value="492" type="int" />
+    <param name="documentsHeight" value="531" type="int" />
     <param name="peaklistWidth" value="195" type="int" />
-    <param name="peaklistHeight" value="492" type="int" />
+    <param name="peaklistHeight" value="531" type="int" />
     <param name="reverseScrolling" value="0" type="int" />
     <param name="macListCtrlGeneric" value="1" type="int" />
     <param name="cursorInfo" value="mz;dist;ppm;z" type="str" />
@@ -25,7 +25,7 @@
     <param name="useServer" value="1" type="int" />
     <param name="serverPort" value="65456" type="int" />
     <param name="updatesEnabled" value="1" type="int" />
-    <param name="updatesChecked" value="20251218" type="str" />
+    <param name="updatesChecked" value="20251211" type="str" />
     <param name="updatesCurrent" value="6.0.2" type="str" />
     <param name="updatesAvailable" value="6.0.2" type="str" />
     <param name="compassMode" value="Profile" type="str" />
@@ -272,7 +272,7 @@
     <param name="dipeptides" value="0" type="int" />
     <param name="tolerance" value="0.100000" type="float" />
     <param name="massType" value="0" type="int" />
-    <param name="consolidate" value="1" type="int" />
+    <param name="consolidate" value="0" type="int" />
   </peakDifferences>
 
   <comparePeaklists>
@@ -448,7 +448,7 @@
   </prospector>
 
   <links>
-    <link name="mMassWhatsNew" value="http://www.mmass.org/download/history.php" />
+    <link name="mMassWhatsNew" value="https://github.com/dreamingspires/mMass/releases" />
     <link name="biomedmstools" value="http://ms.biomed.cas.cz/MSTools/" />
     <link name="blast" value="http://www.ebi.ac.uk/Tools/blastall/" />
     <link name="clustalw" value="http://www.ebi.ac.uk/Tools/clustalw/" />

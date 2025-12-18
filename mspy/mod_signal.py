@@ -22,7 +22,7 @@ import numpy
 from .mod_stopper import CHECK_FORCE_QUIT
 
 # load modules
-import calculations
+from mspy import calculations
 
 
 # SIGNAL PROCESSING FUNCTIONS
