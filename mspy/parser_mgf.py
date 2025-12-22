@@ -121,7 +121,7 @@ class parseMGF:
             return False
 
         headerPattern = re.compile("^([A-Z]+)=(.+)")
-        pointPattern = re.compile("[ \t]?")
+        pointPattern = re.compile(r"\s+")
         currentID = None
 
         # parse each line
@@ -162,7 +162,8 @@ class parseMGF:
                 continue
 
             # get header data
-            parts = headerPattern.match(line)
+            decLine = line.decode()
+            parts = headerPattern.match(decLine)
             if parts:
                 if parts.group(1) == "TITLE":
                     self._scans[currentID]["title"] = parts.group(2).strip()
@@ -184,7 +185,7 @@ class parseMGF:
                 continue
 
             # append datapoint
-            parts = pointPattern.split(line)
+            parts = pointPattern.split(decLine)
             if parts:
                 point = [0, 100.0]
                 try:

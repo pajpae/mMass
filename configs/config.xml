@@ -18,14 +18,14 @@
     <param name="intDigits" value="0" type="int" />
     <param name="ppmDigits" value="1" type="int" />
     <param name="chargeDigits" value="2" type="int" />
-    <param name="lastDir" value="" type="unicode" />
+    <param name="lastDir" value="C:\Users\ppaer\Desktop\Uni\Biotechnologie Master\Biotechnologie Semester 2\WSD\python_projects\tryptic_digest_project\data\mgf_data" type="unicode" />
     <param name="lastSeqDir" value="" type="unicode" />
     <param name="errorUnits" value="Da" type="str" />
     <param name="printQuality" value="5" type="int" />
     <param name="useServer" value="1" type="int" />
     <param name="serverPort" value="65456" type="int" />
     <param name="updatesEnabled" value="1" type="int" />
-    <param name="updatesChecked" value="20251218" type="str" />
+    <param name="updatesChecked" value="20251222" type="str" />
     <param name="updatesCurrent" value="6.0.2" type="str" />
     <param name="updatesAvailable" value="6.0.2" type="str" />
     <param name="compassMode" value="Profile" type="str" />
@@ -34,6 +34,7 @@
   </main>
 
   <recent>
+    <path value="C:\Users\ppaer\Desktop\Uni\Biotechnologie Master\Biotechnologie Semester 2\WSD\python_projects\tryptic_digest_project\data\mgf_data\Lysozym_chicken_0_N4_peaklist_Paul.mgf" />
   </recent>
 
   <colours>
@@ -96,7 +97,7 @@
     <param name="showCursorImage" value="1" type="int" />
     <param name="posBarSize" value="7" type="int" />
     <param name="gelHeight" value="19" type="int" />
-    <param name="autoscale" value="1" type="int" />
+    <param name="autoscale" value="0" type="int" />
     <param name="overlapLabels" value="0" type="int" />
     <param name="checkLimits" value="1" type="int" />
     <param name="labelAngle" value="90" type="int" />
