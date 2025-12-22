@@ -2,7 +2,10 @@
 Jabs' idea for a main task. Might need a bit of scope research. Revision possible.
 
 ### Necessary functions  
-1. 
+1. Connection to Mascot Server
+2. Input of Mascot Match .xml file into programm (automatization possible?)
+3. Extraction of peptide sequences and masses from .xml
+4. Application of the extracted data to the corresponding peaks
 
 ## Main Preparation
 ### Prerequisite for Main 1: Fix Plot not correctly refreshing on any user input apart from resizing
