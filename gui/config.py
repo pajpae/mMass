@@ -109,7 +109,7 @@ main = {
     "serverPort": 65456,
     "reverseScrolling": 0,
     "macListCtrlGeneric": 1,
-    "peaklistColumns": ["mz", "int", "rel", "sn", "z", "fwhm", "resol"],
+    "peaklistColumns": ["mz", "int", "rel", "sn", "z", "fwhm", "resol", "pepSeq"],
     "cursorInfo": ["mz", "dist", "ppm", "z"],
     "updatesEnabled": 1,
     "updatesChecked": "",

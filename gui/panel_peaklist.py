@@ -257,6 +257,11 @@ class panelPeaklist(wx.Panel):
                 self.peakList.SetColumnWidth(x, 60)
                 x += 1
 
+            elif column == "pepSeq":
+                self.peakList.InsertColumn(x, "pep seq", wx.LIST_FORMAT_RIGHT)
+                self.peakList.SetColu(x, 60)
+                x += 1
+
             elif column == "group":
                 self.peakList.InsertColumn(x, "group", wx.LIST_FORMAT_LEFT)
                 self.peakList.SetColumnWidth(x, 60)
@@ -342,6 +347,18 @@ class panelPeaklist(wx.Panel):
         peakFwhm_label.SetFont(wx.SMALL_FONT)
         self.peakFwhm_value.SetFont(wx.SMALL_FONT)
 
+        peakPepSeq_label = wx.StaticText(panel, -1, "pep seq:")
+        self.peakPepSeq_value = wx.TextCtrl(
+            panel,
+            -1,
+            "",
+            size=(80, mwx.SMALL_TEXTCTRL_HEIGHT),
+            style=wx.TE_PROCESS_ENTER
+            #validator=mwx.validator("")        look up how to validate capital letters
+        )
+        peakPepSeq_label.SetFont(wx.SMALL_FONT)
+        self.peakPepSeq_value.SetFont(wx.SMALL_FONT)
+
         peakGroup_label = wx.StaticText(panel, -1, "group:")
         self.peakGroup_value = wx.TextCtrl(
             panel,
@@ -384,13 +401,15 @@ class panelPeaklist(wx.Panel):
         grid.Add(self.peakCharge_value, (4, 1), flag=wx.EXPAND)
         grid.Add(peakFwhm_label, (5, 0), flag=wx.ALIGN_RIGHT | wx.ALIGN_CENTER_VERTICAL)
         grid.Add(self.peakFwhm_value, (5, 1), flag=wx.EXPAND)
+        grid.Add(peakPepSeq_label, (6, 0), flag=wx.ALIGN_RIGHT | wx.ALIGN_CENTER_VERTICAL)
+        grid.Add(self.peakPepSeq_value, (6, 1), flag=wx.ALIGN_RIGHT | wx.ALIGN_CENTER_VERTICAL)
         grid.Add(
-            peakGroup_label, (6, 0), flag=wx.ALIGN_RIGHT | wx.ALIGN_CENTER_VERTICAL
+            peakGroup_label, (7, 0), flag=wx.ALIGN_RIGHT | wx.ALIGN_CENTER_VERTICAL
         )
-        grid.Add(self.peakGroup_value, (6, 1), flag=wx.EXPAND)
+        grid.Add(self.peakGroup_value, (7, 1), flag=wx.EXPAND)
         grid.Add(
             self.peakMonoisotopic_check,
-            (7, 1),
+            (8, 1),
             flag=wx.ALIGN_LEFT | wx.ALIGN_CENTER_VERTICAL,
         )
         grid.AddGrowableCol(1)

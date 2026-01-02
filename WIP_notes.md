@@ -1,6 +1,9 @@
 # Main Tasks: Import Mascot results and show matched peaks AA seq either in the peak sidebar or in the spectrum viewer
 Jabs' idea for a main task. Might need a bit of scope research. Revision possible.
 
+panel_peaklist.py has edits the peaklist to the right as a start to the work;
+worked through to l 458 continue from there
+
 ### Necessary functions  
 1. Connection to Mascot Server
 2. Input of Mascot Match .xml file into programm (automatization possible?)
@@ -38,6 +41,7 @@ Solved:
 Problem description: Trying to use Mascot Sever from code caused error (Server not responding)
 
 ### Optional for Main 1: Check if mMass .mzxml handling works
-Problem description: Apparently doesn't seem to work as well; haven't tested myself. Need to remind Jabs to upload a sample .mzxml
+Problem description **Fixed!**:  
+In mod_signal.py ll 524-525 there is a change to how the debugger works, which leads to an issue reading in the data. Deleting them solves the problem
 
 ### Fully optional 1: Fix Spectrum Viewer not scrolling with arrow keys
