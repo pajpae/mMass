@@ -41,6 +41,7 @@ class peak:
         charge=None,
         isotope=None,
         fwhm=None,
+        pepSeq=None,
         group="",
         **attr
     ):
@@ -52,6 +53,7 @@ class peak:
         self.charge = charge
         self.isotope = isotope
         self.fwhm = fwhm
+        self.pepSeq = pepSeq
         self.group = group
 
         self.childScanNumber = None
@@ -187,6 +189,12 @@ class peak:
         if self.fwhm:
             self.resolution = self.mz / self.fwhm
 
+    # ----
+
+    def setpepSeq(self, pepSeq):
+        """Set new pepSeq value."""
+        self.pepSeq = pepSeq
+        
     # ----
 
     def setgroup(self, group):

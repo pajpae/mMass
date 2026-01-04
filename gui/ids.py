@@ -133,6 +133,7 @@ ID_viewPeaklistColumnZ = wx.NewId()
 ID_viewPeaklistColumnMass = wx.NewId()
 ID_viewPeaklistColumnFwhm = wx.NewId()
 ID_viewPeaklistColumnResol = wx.NewId()
+ID_viewPeaklistColumnPepSeq = wx.NewId()
 ID_viewPeaklistColumnGroup = wx.NewId()
 
 HK_viewPosBars = "\tAlt+Ctrl+P"

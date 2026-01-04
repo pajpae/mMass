@@ -353,8 +353,7 @@ class panelPeaklist(wx.Panel):
             -1,
             "",
             size=(80, mwx.SMALL_TEXTCTRL_HEIGHT),
-            style=wx.TE_PROCESS_ENTER
-            #validator=mwx.validator("")        look up how to validate capital letters
+            style=wx.TE_PROCESS_ENTER,
         )
         peakPepSeq_label.SetFont(wx.SMALL_FONT)
         self.peakPepSeq_value.SetFont(wx.SMALL_FONT)
@@ -497,6 +496,7 @@ class panelPeaklist(wx.Panel):
         menu.Append(ID_viewPeaklistColumnMass, "Mass", "", wx.ITEM_CHECK)
         menu.Append(ID_viewPeaklistColumnFwhm, "FWHM", "", wx.ITEM_CHECK)
         menu.Append(ID_viewPeaklistColumnResol, "Resolution", "", wx.ITEM_CHECK)
+        menu.Append(ID_viewPeaklistColumnPepSeq, "pep seq", "", wx.ITEM_CHECK)
         menu.Append(ID_viewPeaklistColumnGroup, "Group", "", wx.ITEM_CHECK)
 
         menu.Check(
@@ -526,6 +526,9 @@ class panelPeaklist(wx.Panel):
         )
         menu.Check(
             ID_viewPeaklistColumnResol, bool("resol" in config.main["peaklistColumns"])
+        )
+        menu.Check(
+            ID_viewPeaklistColumnPepSeq, bool("pepSeq" in config.main["peaklistColumns"])
         )
         menu.Check(
             ID_viewPeaklistColumnGroup, bool("group" in config.main["peaklistColumns"])
@@ -562,6 +565,9 @@ class panelPeaklist(wx.Panel):
             wx.EVT_MENU,
             self.parent.onViewPeaklistColumns,
             id=ID_viewPeaklistColumnResol,
+        )
+        self.Bind(
+            wx.EVT_MENU, self.parent.onViewPeaklistColumns, id=ID_viewPeaklistColumnPepSeq
         )
         self.Bind(
             wx.EVT_MENU,
@@ -910,6 +916,8 @@ class panelPeaklist(wx.Panel):
                     row.append(peak.fwhm)
                 elif column == "resol":
                     row.append(peak.resolution)
+                elif column =="pepSeq":
+                    row.append(peak.pepSeq)
                 elif column == "group":
                     row.append(peak.group)
                 else:
@@ -983,6 +991,10 @@ class panelPeaklist(wx.Panel):
             elif column == "resol":
                 if item[x]:
                     data = "%0.0f" % (item[x])
+            
+            elif column == "pepSeq":
+                if item[x] is not None:
+                    data = str(item[x])
 
             elif column == "group":
                 if item[x] is not None:
@@ -1011,6 +1023,7 @@ class panelPeaklist(wx.Panel):
         self.peakSN_value.SetValue("")
         self.peakCharge_value.SetValue("")
         self.peakFwhm_value.SetValue("")
+        self.peakPepSeq_value.SetValue("")
         self.peakGroup_value.SetValue("")
         self.peakMonoisotopic_check.SetValue(True)
         self.peakReplace_butt.Enable(False)
@@ -1026,6 +1039,8 @@ class panelPeaklist(wx.Panel):
                 self.peakCharge_value.SetValue(str(peak.charge))
             if peak.fwhm:
                 self.peakFwhm_value.SetValue(str(round(peak.fwhm, 6)))
+            if peak.pepSeq:
+                self.peakPepSeq_value.SetValue(str(peak.pepSeq))
             if peak.group:
                 self.peakGroup_value.SetValue(str(peak.group))
             if peak.isotope == 0:
@@ -1047,6 +1062,7 @@ class panelPeaklist(wx.Panel):
             sn = self.peakSN_value.GetValue()
             charge = self.peakCharge_value.GetValue()
             fwhm = self.peakFwhm_value.GetValue()
+            pepSeq = self.peakPepSeq_value.GetValue()
             group = self.peakGroup_value.GetValue()
             monoisotope = self.peakMonoisotopic_check.GetValue()
 
@@ -1077,6 +1093,9 @@ class panelPeaklist(wx.Panel):
             else:
                 fwhm = None
 
+            if not pepSeq:
+                pepSeq = ""
+
             if not group:
                 group = ""
 
@@ -1094,6 +1113,7 @@ class panelPeaklist(wx.Panel):
                 charge=charge,
                 isotope=isotope,
                 fwhm=fwhm,
+                pepSeq=pepSeq,
                 group=group,
             )
             return peak
@@ -1161,6 +1181,8 @@ class panelPeaklist(wx.Panel):
                     line += str(peak.fwhm) + "\t"
                 if "resol" in config.export["peaklistColumns"]:
                     line += str(peak.resolution) + "\t"
+                if "pepSeq" in config.export["peaklistColumns"]:
+                    line += str(peak.pepSeq) + "\t"
                 if "group" in config.export["peaklistColumns"]:
                     line += str(peak.group) + "\t"
                 buff += "%s\n" % (line.rstrip())
@@ -1368,6 +1390,11 @@ class dlgCopy(wx.Dialog):
             config.export["peaklistColumns"].count("resol")
         )
 
+        self.peaklistColumnPepSeq_check = wx.CheckBox(self, -1, "pep seq")
+        self.peaklistColumnPepSeq_check.SetVlaue(
+            config.export["peaklistColumns"].count("pepSeq")
+        )
+
         self.peaklistColumnGroup_check = wx.CheckBox(self, -1, "Group")
         self.peaklistColumnGroup_check.SetValue(
             config.export["peaklistColumns"].count("group")
@@ -1389,7 +1416,8 @@ class dlgCopy(wx.Dialog):
         grid.Add(self.peaklistColumnMass_check, (1, 2))
         grid.Add(self.peaklistColumnFwhm_check, (2, 2))
         grid.Add(self.peaklistColumnResol_check, (3, 2))
-        grid.Add(self.peaklistColumnGroup_check, (4, 2))
+        grid.Add(self.peaklistColumnPepSeq_check, (4, 2))
+        grid.Add(self.peaklistColumnGroup_check, (5, 2))
 
         staticSizer.Add(grid, 0, wx.ALL, 5)
 
@@ -1435,6 +1463,8 @@ class dlgCopy(wx.Dialog):
             config.export["peaklistColumns"].append("fwhm")
         if self.peaklistColumnResol_check.IsChecked():
             config.export["peaklistColumns"].append("resol")
+        if self.peaklistColumnPepSeq_check.IsChecked():
+            config.export["peaklistColumns"].append("pepSeq")
         if self.peaklistColumnGroup_check.IsChecked():
             config.export["peaklistColumns"].append("group")
 
