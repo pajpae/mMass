@@ -575,7 +575,7 @@ class peaklist:
     # ----
 
     def _setbasepeak(self):
-        """Get most intens peak."""
+        """Get most intense peak."""
 
         # check peaklist
         if not self.peaks:
