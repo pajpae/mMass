@@ -34,6 +34,7 @@ import tempfile
 import wx
 import wx.aui
 import numpy
+import feature_testing
 
 # load modules
 from .ids import *
@@ -124,7 +125,9 @@ class mainFrame(wx.Frame):
         self.bufferedScanlists = {}
 
         self.processingDocumentQueue = False
+        self.processingResultsQueue = False
         self.tmpDocumentQueue = []
+        self.tmpResultsQueue = []
         self.tmpScanlist = None
         self.tmpSequenceList = None
         self.tmpCompassXport = None
@@ -658,6 +661,7 @@ class mainFrame(wx.Frame):
         tools.Append(ID_mascotPMF, "Mascot PMF", "")
         tools.Append(ID_mascotMIS, "Mascot MS/MS Search", "")
         tools.Append(ID_mascotSQ, "Mascot Sequence Query", "")
+        tools.Append(ID_mascotResults, "Read Mascot Results", "")
         tools.AppendSeparator()
         tools.Append(ID_toolsProfound, "ProFound Search", "")
         tools.AppendSeparator()
@@ -687,6 +691,7 @@ class mainFrame(wx.Frame):
         self.Bind(wx.EVT_MENU, self.onToolsMascot, id=ID_mascotPMF)
         self.Bind(wx.EVT_MENU, self.onToolsMascot, id=ID_mascotMIS)
         self.Bind(wx.EVT_MENU, self.onToolsMascot, id=ID_mascotSQ)
+        self.Bind(wx.EVT_MENU, self.onToolsMascotResults, id=ID_mascotResults)
         self.Bind(wx.EVT_MENU, self.onToolsProfound, id=ID_toolsProfound)
         self.Bind(wx.EVT_MENU, self.onToolsProspector, id=ID_prospectorMSFit)
         self.Bind(wx.EVT_MENU, self.onToolsProspector, id=ID_prospectorMSTag)
@@ -3387,6 +3392,107 @@ class mainFrame(wx.Frame):
 
     # ----
 
+    def onToolsMascotResults(self, evt=None, path=None):
+        """Open file dialog for reading mascot results."""
+
+        # add path to queue
+        if path:
+            self.tmpResultsQueue.append(path)
+
+        # open dialog if no path specified
+        else:
+            lastDir = ""
+            if os.path.exists(config.main["lastDir"]):
+                lastDir = config.main["lastDir"]
+            wildcard = "All supported formats|fid;*.msd;*.baf;*.yep;*.mzData;*.mzdata*;*.mzXML;*.mzxml;*.mzML;*.mzml;*.xml;*.XML;*.mgf;*.MGF;*.txt;*.xy;*.asc|All files|*.*"
+            dlg = wx.FileDialog(
+                self,
+                "Open Document",
+                lastDir,
+                "",
+                wildcard=wildcard,
+                style=wx.FD_OPEN | wx.FD_MULTIPLE | wx.FD_FILE_MUST_EXIST,
+            )
+            if dlg.ShowModal() == wx.ID_OK:
+                paths = dlg.GetPaths()
+                dlg.Destroy()
+                self.tmpResultsQueue += list(paths)
+            else:
+                dlg.Destroy()
+                return
+    
+    # ----
+    def importResultsQueue(self):
+        """Open dropped results."""
+
+        # queue is already running
+        if self.processingResultsQueue:  
+            return
+
+        # process all files in queue
+        self.processingResultsQueue = True
+        while self.tmpResultsQueue:
+            self.importResult(path=self.tmpResultsQueue[0])
+
+        # release processing falg
+        self.processingResultsQueue = False
+
+    # ----
+
+    def importResult(self, path):
+        """Open result file."""
+
+        # remove path from queue
+        if path in self.tmpResultsQueue:
+            i = self.tmpResultsQueue.index(path)
+            del self.tmpResultsQueue[i]
+        
+        # check path
+        if os.path.exists(path):
+            config.main["lastDir"] = os.path.split(path)[0]
+        else:
+            wx.Bell()
+            dlg = mwx.dlgMessage(
+                self,
+                title="Document doesn't exists.",
+                message="Specified document path cannot be found or is temporarily\nunavailable.",
+            )
+            dlg.ShowModal()
+            dlg.Destroy()
+            return
+        
+        # get document type
+        docType = self.getDocumentType(path)
+        if not docType:
+            wx.Bell()
+            dlg = mwx.dlgMessage(
+                self,
+                title="Unable to open the document.",
+                message="Document type or structure can't be recognized. Selected format\nis probably unsupported.",
+            )
+            dlg.ShowModal()
+            dlg.Destroy()
+            return
+       
+        # load results
+        result = self.runResultParser(path, docType)
+    
+    # ----
+
+    def runResultParser(self, path, docType):
+        """Load result document."""
+
+        document = False
+        result = False
+
+        # get data
+        if docType == "xml":
+            parser = mspy.csvResults(path)
+            results = parser.getResults()
+
+
+    # ----
+
     def onToolsProfound(self, evt=None):
         """Show ProFound search panel."""
 
@@ -4523,6 +4629,8 @@ class mainFrame(wx.Frame):
             return "XY"
         elif extension in (".fa", ".fsa", ".faa", ".fasta"):
             return "FASTA"
+        elif extension == ".csv":
+            return "csv"
         elif os.path.isdir(path):
             for dirpath, dirnames, filenames in os.walk(path):
                 names = [i.lower() for i in filenames]
@@ -4539,7 +4647,9 @@ class mainFrame(wx.Frame):
                 return "mzXML"
             elif "<mzML" in data:
                 return "mzML"
-            document.close()
+            else:
+                return "xml"
+            document.close()               
 
         # unknown document type
         return False

@@ -1,0 +1,81 @@
+
+"Header","--------------------------------------------------------"
+
+Search title,""
+Timestamp,"2026-01-12T15:39:08Z"
+User,"Paul"
+Email,"pa.paerschke@gmail.com"
+Report URI,"https://www.matrixscience.com/cgi/master_results.pl?file=../data/20260112/FTGmmrEEt.msr"
+Peak list data path,"Lysozym_chicken_0_N4_peaklist_Paul.mgf"
+Peak list format,""
+Search type,PMF
+Mascot version,"3.0.0"
+Database,"SwissProt"
+Fasta file,"SwissProt_2025_04.fasta"
+Total sequences,573661
+Total residues,207922125
+Sequences after taxonomy filter,573661
+Number of queries,100
+
+"Decoy","--------------------------------------------------------"
+
+PSM count in target above identity threshold,1
+PSM count in decoy above identity threshold,0
+Sequence count in target above identity threshold,1
+Sequence count in decoy above identity threshold,0
+Highest score in search of target database,81
+Highest score in search of decoy database,54
+
+"Fixed modifications","--------------------------------------------------------"
+
+"Identifier","Name","Delta","Neutral loss"
+1,"Carbamidomethyl (C)",57.021464
+
+"Variable modifications","--------------------------------------------------------"
+
+"Identifier","Name","Delta","Neutral loss(es)"
+1,"Oxidation (M)",15.994915,0,63.998285
+
+"Search Parameters","--------------------------------------------------------"
+
+Taxonomy filter,"All entries"
+Enzyme,"Trypsin"
+Maximum Missed Cleavages,1
+Fixed modifications,"Carbamidomethyl (C)"
+Variable modifications,"Oxidation (M)"
+Peptide Mass Tolerance,200
+Peptide Mass Tolerance Units,ppm
+Peptide Charge State,1+
+Mass values,Monoisotopic
+Decoy database also searched,1
+
+"Format parameters","--------------------------------------------------------"
+
+Significance threshold,0.05
+Max. number of hits,0
+Min. number of sig. unique sequences,1
+Include same-set proteins,0
+Include sub-set proteins,0
+Show duplicate peptides,1
+
+"Protein hits","--------------------------------------------------------"
+
+prot_hit_num,prot_acc,prot_desc,prot_score,prot_thresh,prot_expect,prot_mass,prot_matches,pep_query,pep_index,pep_rank,pep_isbold,pep_isunique,pep_exp_mz,pep_exp_mr,pep_calc_mr,pep_delta,pep_start,pep_end,pep_miss,pep_res_before,pep_seq,pep_res_after,pep_var_mod,pep_var_mod_pos,pep_summed_mod_pos,pep_local_mod_pos
+1,"LYSC_CHICK","Lysozyme C OS=Gallus gallus OX=9031 GN=LYZ PE=1 SV=1",81,70,0.0047,16741,9,5,-1,,,,874.3668,873.3595,873.4093,-0.0498,33,39,0,R,HGLDNYR,G,"",,,
+1,"LYSC_CHICK","Lysozyme C OS=Gallus gallus OX=9031 GN=LYZ PE=1 SV=1",81,70,0.0047,16741,9,23,-1,,,,1030.4662,1029.4589,1029.5104,-0.0515,32,39,1,K,RHGLDNYR,G,"",,,
+1,"LYSC_CHICK","Lysozyme C OS=Gallus gallus OX=9031 GN=LYZ PE=1 SV=1",81,70,0.0047,16741,9,24,-1,,,,1045.4925,1044.4853,1044.5352,-0.0500,135,143,0,K,GTDVQAWIR,G,"",,,
+1,"LYSC_CHICK","Lysozyme C OS=Gallus gallus OX=9031 GN=LYZ PE=1 SV=1",81,70,0.0047,16741,9,39,-1,,,,1428.5968,1427.5895,1427.6429,-0.0534,52,63,0,K,FESNFNTQATNR,N,"",,,
+1,"LYSC_CHICK","Lysozyme C OS=Gallus gallus OX=9031 GN=LYZ PE=1 SV=1",81,70,0.0047,16741,9,52,-1,,,,1675.7523,1674.7450,1674.7937,-0.0486,116,130,0,K,IVSDGNGMNAWVAWR,N,"",,,
+1,"LYSC_CHICK","Lysozyme C OS=Gallus gallus OX=9031 GN=LYZ PE=1 SV=1",81,70,0.0047,16741,9,53,-1,,,,1691.7503,1690.7430,1690.7886,-0.0456,116,130,0,K,IVSDGNGMNAWVAWR,N,"Oxidation (M)",0.000000010000000.0,,
+1,"LYSC_CHICK","Lysozyme C OS=Gallus gallus OX=9031 GN=LYZ PE=1 SV=1",81,70,0.0047,16741,9,66,-1,,,,1753.8021,1752.7948,1752.8278,-0.0331,64,79,0,R,NTDGSTDYGILQINSR,W,"",,,
+1,"LYSC_CHICK","Lysozyme C OS=Gallus gallus OX=9031 GN=LYZ PE=1 SV=1",81,70,0.0047,16741,9,78,-1,,,,1803.8670,1802.8597,1802.8886,-0.0289,115,130,1,K,KIVSDGNGMNAWVAWR,N,"",,,
+1,"LYSC_CHICK","Lysozyme C OS=Gallus gallus OX=9031 GN=LYZ PE=1 SV=1",81,70,0.0047,16741,9,79,-1,,,,1819.8612,1818.8539,1818.8835,-0.0296,115,130,1,K,KIVSDGNGMNAWVAWR,N,"Oxidation (M)",0.0000000010000000.0,,
+2,"LYSC_COLVI","Lysozyme C OS=Colinus virginianus OX=9014 GN=LYZ PE=1 SV=2",65,70,0.19,14718,9,5,-1,,,,874.3668,873.3595,873.4093,-0.0498,15,21,0,R,HGLDNYR,G,"",,,
+2,"LYSC_COLVI","Lysozyme C OS=Colinus virginianus OX=9014 GN=LYZ PE=1 SV=2",65,70,0.19,14718,9,23,-1,,,,1030.4662,1029.4589,1029.5104,-0.0515,14,21,1,K,RHGLDNYR,G,"",,,
+2,"LYSC_COLVI","Lysozyme C OS=Colinus virginianus OX=9014 GN=LYZ PE=1 SV=2",65,70,0.19,14718,9,24,-1,,,,1045.4925,1044.4853,1044.5352,-0.0500,117,125,0,K,GTDVQAWIR,G,"",,,
+2,"LYSC_COLVI","Lysozyme C OS=Colinus virginianus OX=9014 GN=LYZ PE=1 SV=2",65,70,0.19,14718,9,52,-1,,,,1675.7523,1674.7450,1674.7937,-0.0486,98,112,0,K,IVSDGNGMNAWVAWR,N,"",,,
+2,"LYSC_COLVI","Lysozyme C OS=Colinus virginianus OX=9014 GN=LYZ PE=1 SV=2",65,70,0.19,14718,9,53,-1,,,,1691.7503,1690.7430,1690.7886,-0.0456,98,112,0,K,IVSDGNGMNAWVAWR,N,"Oxidation (M)",0.000000010000000.0,,
+2,"LYSC_COLVI","Lysozyme C OS=Colinus virginianus OX=9014 GN=LYZ PE=1 SV=2",65,70,0.19,14718,9,62,-1,,,,1739.5111,1738.5039,1738.8122,-0.3083,46,61,0,R,NTDGSTDYGVLQINSR,W,"",,,
+2,"LYSC_COLVI","Lysozyme C OS=Colinus virginianus OX=9014 GN=LYZ PE=1 SV=2",65,70,0.19,14718,9,63,-1,,,,1739.7117,1738.7044,1738.8122,-0.1078,46,61,0,R,NTDGSTDYGVLQINSR,W,"",,,
+2,"LYSC_COLVI","Lysozyme C OS=Colinus virginianus OX=9014 GN=LYZ PE=1 SV=2",65,70,0.19,14718,9,78,-1,,,,1803.8670,1802.8597,1802.8886,-0.0289,97,112,1,K,KIVSDGNGMNAWVAWR,N,"",,,
+2,"LYSC_COLVI","Lysozyme C OS=Colinus virginianus OX=9014 GN=LYZ PE=1 SV=2",65,70,0.19,14718,9,79,-1,,,,1819.8612,1818.8539,1818.8835,-0.0296,97,112,1,K,KIVSDGNGMNAWVAWR,N,"Oxidation (M)",0.0000000010000000.0,,

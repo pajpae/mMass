@@ -25,7 +25,7 @@
     <param name="useServer" value="1" type="int" />
     <param name="serverPort" value="65456" type="int" />
     <param name="updatesEnabled" value="1" type="int" />
-    <param name="updatesChecked" value="20251211" type="str" />
+    <param name="updatesChecked" value="20260112" type="str" />
     <param name="updatesCurrent" value="6.0.2" type="str" />
     <param name="updatesAvailable" value="6.0.2" type="str" />
     <param name="compassMode" value="Profile" type="str" />
