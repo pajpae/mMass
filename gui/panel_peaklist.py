@@ -1391,7 +1391,7 @@ class dlgCopy(wx.Dialog):
         )
 
         self.peaklistColumnPepSeq_check = wx.CheckBox(self, -1, "pep seq")
-        self.peaklistColumnPepSeq_check.SetVlaue(
+        self.peaklistColumnPepSeq_check.SetValue(
             config.export["peaklistColumns"].count("pepSeq")
         )
 
