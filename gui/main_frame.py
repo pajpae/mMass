@@ -504,7 +504,7 @@ class mainFrame(wx.Frame):
         self.menubar.Check(
             ID_viewPeaklistColumnResol, bool("resol" in config.main["peaklistColumns"])
         )
-        self.menubar.Chekc(
+        self.menubar.Check(
             ID_viewPeaklistColumnPepSeq, bool("resol" in config.main["peaklistColumns"])
         )
         self.menubar.Check(
