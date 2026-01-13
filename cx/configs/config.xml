@@ -13,7 +13,7 @@
     <param name="reverseScrolling" value="0" type="int" />
     <param name="macListCtrlGeneric" value="1" type="int" />
     <param name="cursorInfo" value="mz;dist;ppm;z" type="str" />
-    <param name="peaklistColumns" value="mz;int;rel;sn;z;fwhm;resol" type="str" />
+    <param name="peaklistColumns" value="mz;int;rel;sn;z;fwhm;resol;pepSeq" type="str" />
     <param name="mzDigits" value="4" type="int" />
     <param name="intDigits" value="0" type="int" />
     <param name="ppmDigits" value="1" type="int" />

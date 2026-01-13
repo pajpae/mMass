@@ -8,4 +8,4 @@ filepathxml = "C:/Users/ppaer/OneDrive/Documents/GitHub/mMass/feature_testing/te
 #results.getResults()
 
 results = xmlResults(filepathxml)
-results.getResults()
+test = results.getResults()

@@ -29,7 +29,7 @@ class csvResults:
     # ----
 
     def getResults(self):
-        # open document:
+        # initialize list for creation of peaklist
         peaks = []
         with open(self.path) as csvfile:
             csv_reader = csv.reader(csvfile, delimiter=',')
@@ -38,6 +38,7 @@ class csvResults:
                 if len(row) < 1:
                         continue
                 elif blocker:
+                    # only parse lines after hitting 'Protein hits' section
                     if row[0] == 'Protein hits':
                         blocker = False
                         continue
@@ -45,6 +46,7 @@ class csvResults:
                         continue
                 if len(row) > 0:
                     counter = 0
+                    # assing indexes for finding observed peptide mass and peptide sequence to create peaks
                     if not self.pepmass and not self.pepseq:
                         while not self.pepmass and not self.pepseq:
                             for i in row:
@@ -54,13 +56,13 @@ class csvResults:
                                     self.pepseq = counter
                                 counter += 1
                     else:
+                        # create peaks
                         if int(row[0]) == 1:
                             obs_mz = float(row[self.pepmass])
                             pep_seq = (row[self.pepseq])
-                            peak = obj_peak.peak(obs_mz, pepSeq = pep_seq)
+                            peak = obj_peak.peak(obs_mz, pepSeq= pep_seq)
                             peaks.append(peak)
                         else:
                             break
         results = obj_peaklist.peaklist(peaks)
-        for peak in results:
-            print (f"pepmass: {peak.mz}; pepseq: {peak.pepSeq}")
+        return results

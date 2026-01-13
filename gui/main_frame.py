@@ -34,7 +34,9 @@ import tempfile
 import wx
 import wx.aui
 import numpy
-import feature_testing
+
+import csv_results
+import xml_results
 
 # load modules
 from .ids import *
@@ -332,6 +334,7 @@ class mainFrame(wx.Frame):
         viewPeaklistColumns.Append(
             ID_viewPeaklistColumnResol, "Resolution", "", wx.ITEM_CHECK
         )
+        viewPeaklistColumns.Append(ID_viewPeaklistColumnPepSeq, "pepseq", "", wx.ITEM_CHECK)
         viewPeaklistColumns.Append(
             ID_viewPeaklistColumnGroup, "Group", "", wx.ITEM_CHECK
         )
@@ -411,6 +414,8 @@ class mainFrame(wx.Frame):
         self.Bind(
             wx.EVT_MENU, self.onViewPeaklistColumns, id=ID_viewPeaklistColumnResol
         )
+        self.Bind(
+            wx.EVT_MENU, self.onViewPeaklistColumns, id=ID_viewPeaklistColumnPepSeq)
         self.Bind(
             wx.EVT_MENU, self.onViewPeaklistColumns, id=ID_viewPeaklistColumnGroup
         )
@@ -498,6 +503,9 @@ class mainFrame(wx.Frame):
         )
         self.menubar.Check(
             ID_viewPeaklistColumnResol, bool("resol" in config.main["peaklistColumns"])
+        )
+        self.menubar.Chekc(
+            ID_viewPeaklistColumnPepSeq, bool("resol" in config.main["peaklistColumns"])
         )
         self.menubar.Check(
             ID_viewPeaklistColumnGroup, bool("group" in config.main["peaklistColumns"])
@@ -2705,6 +2713,7 @@ class mainFrame(wx.Frame):
             ID_viewPeaklistColumnMass: "mass",
             ID_viewPeaklistColumnFwhm: "fwhm",
             ID_viewPeaklistColumnResol: "resol",
+            ID_viewPeaklistColumnPepSeq: "pepseq",
             ID_viewPeaklistColumnGroup: "group",
         }
 
@@ -2739,6 +2748,8 @@ class mainFrame(wx.Frame):
                 config.main["peaklistColumns"].append("fwhm")
             if "resol" in columns:
                 config.main["peaklistColumns"].append("resol")
+            if "pepseq" in columns:
+                config.main["peaklistColumes"].append("pepSeq")
             if "group" in columns:
                 config.main["peaklistColumns"].append("group")
         else:
@@ -3475,7 +3486,12 @@ class mainFrame(wx.Frame):
             return
        
         # load results
-        result = self.runResultParser(path, docType)
+        results = self.runResultParser(path, docType)
+
+        # append results to active peaklist
+        if results:
+            pass
+
     
     # ----
 
@@ -3483,12 +3499,18 @@ class mainFrame(wx.Frame):
         """Load result document."""
 
         document = False
-        result = False
+        results = False
 
         # get data
         if docType == "xml":
-            parser = mspy.csvResults(path)
+            parser = xml_results.xmlResults(path)
             results = parser.getResults()
+        
+        elif docType == "csv":
+            parser = csv_results.xmlResults(path)
+            results = parser.getResults()
+        
+        return results
 
 
     # ----
