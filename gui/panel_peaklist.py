@@ -259,7 +259,7 @@ class panelPeaklist(wx.Panel):
 
             elif column == "pepSeq":
                 self.peakList.InsertColumn(x, "pep seq", wx.LIST_FORMAT_RIGHT)
-                self.peakList.SetColu(x, 60)
+                self.peakList.SetColumnWidth(x, 60)
                 x += 1
 
             elif column == "group":

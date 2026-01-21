@@ -41,7 +41,7 @@ class peak:
         charge=None,
         isotope=None,
         fwhm=None,
-        pepSeq="TEST",
+        pepSeq="",
         group="",
         **attr
     ):
