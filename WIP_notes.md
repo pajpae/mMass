@@ -1,14 +1,15 @@
 # Main Tasks: Import Mascot results and show matched peaks AA seq either in the peak sidebar or in the spectrum viewer
-Jabs' idea for a main task. Might need a bit of scope research. Revision possible.
 
 panel_peaklist.py has edits the peaklist to the right as a start to the work;
 worked through to l 458 continue from there
 
 ### Necessary functions  
-1. Connection to Mascot Server
-2. Input of Mascot Match .xml file into programm (automatization possible?)
-3. Extraction of peptide sequences and masses from .xml
-4. Application of the extracted data to the corresponding peaks
+1. Input of Mascot Match .xml file into programm (automatization possible?)
+2. Extraction of peptide sequences and masses from .xml
+3. Application of the extracted data to the corresponding peaks
+
+### Optional tasks
+1. Connection to Mascot Server and starting a search
 
 ## Main Preparation
 ### Prerequisite for Main 1: Fix Plot not correctly refreshing on any user input apart from resizing
