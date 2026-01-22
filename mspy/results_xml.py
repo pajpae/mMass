@@ -13,7 +13,7 @@ from mspy import obj_peaklist
 # PARSE XML RESULTS
 # --------------
 
-class xmlResults:
+class resultsXml:
     """Parse results from xml."""
 
     def __init__(self,path):

@@ -1,0 +1,82 @@
+
+"Header","--------------------------------------------------------"
+
+Search title,"0_C4_Spectrum"
+Timestamp,"2026-01-22T18:11:54Z"
+User,"Paul"
+Email,"pa.paerschke@gmail.com"
+Report URI,"https://www.matrixscience.com/cgi/master_results.pl?file=../data/20260122/FTGmSGHST.msr"
+Peak list data path,""
+Peak list format,"Mascot generic"
+Search type,PMF
+Mascot version,"3.0.0"
+Database,"SwissProt"
+Fasta file,"SwissProt_2025_04.fasta"
+Total sequences,573661
+Total residues,207922125
+Sequences after taxonomy filter,573661
+Number of queries,28
+
+"Fixed modifications","--------------------------------------------------------"
+
+"Identifier","Name","Delta","Neutral loss"
+1,"Carbamidomethyl (C)",57.021464
+
+"Variable modifications","--------------------------------------------------------"
+
+"Identifier","Name","Delta","Neutral loss(es)"
+1,"Oxidation (M)",15.994915,0,63.998285
+
+"Search Parameters","--------------------------------------------------------"
+
+Taxonomy filter,"All entries"
+Enzyme,"Trypsin"
+Maximum Missed Cleavages,1
+Fixed modifications,"Carbamidomethyl (C),"
+Variable modifications,"Oxidation (M),"
+Peptide Mass Tolerance,200
+Peptide Mass Tolerance Units,ppm
+Peptide Charge State,1+
+Mass values,Monoisotopic
+Decoy database also searched,0
+
+"Format parameters","--------------------------------------------------------"
+
+Significance threshold,0.05
+Max. number of hits,0
+Min. number of sig. unique sequences,1
+Include same-set proteins,0
+Include sub-set proteins,0
+Show duplicate peptides,1
+
+"Protein hits","--------------------------------------------------------"
+
+prot_hit_num,prot_acc,prot_desc,prot_score,prot_thresh,prot_expect,prot_mass,prot_matches,pep_query,pep_index,pep_rank,pep_isbold,pep_isunique,pep_exp_mz,pep_exp_mr,pep_calc_mr,pep_delta,pep_start,pep_end,pep_miss,pep_res_before,pep_seq,pep_res_after,pep_var_mod,pep_var_mod_pos,pep_summed_mod_pos,pep_local_mod_pos
+1,"ALBU_BOVIN","Albumin OS=Bos taurus OX=9913 GN=ALB PE=1 SV=4",193,70,2.9e-14,71244,21,1,-1,,,,752.3513,751.3441,751.3500,-0.0060,341,346,0,K,NYQEAK,D,"",,,
+1,"ALBU_BOVIN","Albumin OS=Bos taurus OX=9913 GN=ALB PE=1 SV=4",193,70,2.9e-14,71244,21,2,-1,,,,927.4696,926.4624,926.4861,-0.0238,161,167,0,K,YLYEIAR,R,"",,,
+1,"ALBU_BOVIN","Albumin OS=Bos taurus OX=9913 GN=ALB PE=1 SV=4",193,70,2.9e-14,71244,21,4,-1,,,,1305.6617,1304.6544,1304.7088,-0.0544,402,412,0,K,HLVDEPQNLIK,Q,"",,,
+1,"ALBU_BOVIN","Albumin OS=Bos taurus OX=9913 GN=ALB PE=1 SV=4",193,70,2.9e-14,71244,21,5,-1,,,,1399.6312,1398.6239,1398.6853,-0.0615,569,580,0,K,TVMENFVAFVDK,C,"",,,
+1,"ALBU_BOVIN","Albumin OS=Bos taurus OX=9913 GN=ALB PE=1 SV=4",193,70,2.9e-14,71244,21,6,-1,,,,1419.6316,1418.6244,1418.6864,-0.0620,89,100,0,K,SLHTLFGDELCK,V,"",,,
+1,"ALBU_BOVIN","Albumin OS=Bos taurus OX=9913 GN=ALB PE=1 SV=4",193,70,2.9e-14,71244,21,7,-1,,,,1439.7465,1438.7392,1438.8045,-0.0652,360,371,1,R,RHPEYAVSVLLR,L,"",,,
+1,"ALBU_BOVIN","Albumin OS=Bos taurus OX=9913 GN=ALB PE=1 SV=4",193,70,2.9e-14,71244,21,8,-1,,,,1479.7300,1478.7227,1478.7881,-0.0654,421,433,0,K,LGEYGFQNALIVR,Y,"",,,
+1,"ALBU_BOVIN","Albumin OS=Bos taurus OX=9913 GN=ALB PE=1 SV=4",193,70,2.9e-14,71244,21,9,-1,,,,1480.0035,1478.9962,1478.7881,0.2080,421,433,0,K,LGEYGFQNALIVR,Y,"",,,
+1,"ALBU_BOVIN","Albumin OS=Bos taurus OX=9913 GN=ALB PE=1 SV=4",193,70,2.9e-14,71244,21,11,-1,,,,1502.5542,1501.5470,1501.6065,-0.0595,375,386,0,K,EYEATLEECCAK,D,"",,,
+1,"ALBU_BOVIN","Albumin OS=Bos taurus OX=9913 GN=ALB PE=1 SV=4",193,70,2.9e-14,71244,21,13,-1,,,,1554.5967,1553.5894,1553.6457,-0.0563,387,399,0,K,DDPHACYSTVFDK,L,"",,,
+1,"ALBU_BOVIN","Albumin OS=Bos taurus OX=9913 GN=ALB PE=1 SV=4",193,70,2.9e-14,71244,21,14,-1,,,,1567.6757,1566.6685,1566.7354,-0.0670,347,359,0,K,DAFLGSFLYEYSR,R,"",,,
+1,"ALBU_BOVIN","Albumin OS=Bos taurus OX=9913 GN=ALB PE=1 SV=4",193,70,2.9e-14,71244,21,15,-1,,,,1567.9569,1566.9496,1566.7354,0.2141,347,359,0,K,DAFLGSFLYEYSR,R,"",,,
+1,"ALBU_BOVIN","Albumin OS=Bos taurus OX=9913 GN=ALB PE=1 SV=4",193,70,2.9e-14,71244,21,16,-1,,,,1639.8664,1638.8591,1638.9305,-0.0714,437,451,1,R,KVPQVSTPTLVEVSR,S,"",,,
+1,"ALBU_BOVIN","Albumin OS=Bos taurus OX=9913 GN=ALB PE=1 SV=4",193,70,2.9e-14,71244,21,17,-1,,,,1724.7552,1723.7479,1723.8273,-0.0794,469,482,0,R,MPCTEDYLSLILNR,L,"",,,
+1,"ALBU_BOVIN","Albumin OS=Bos taurus OX=9913 GN=ALB PE=1 SV=4",193,70,2.9e-14,71244,21,19,-1,,,,1747.6305,1746.6232,1746.6978,-0.0746,184,197,0,K,YNGVFQECCQAEDK,G,"",,,
+1,"ALBU_BOVIN","Albumin OS=Bos taurus OX=9913 GN=ALB PE=1 SV=4",193,70,2.9e-14,71244,21,21,-1,,,,1880.8361,1879.8288,1879.9138,-0.0850,508,523,0,R,RPCFSALTPDETYVPK,A,"",,,
+1,"ALBU_BOVIN","Albumin OS=Bos taurus OX=9913 GN=ALB PE=1 SV=4",193,70,2.9e-14,71244,21,22,-1,,,,1888.8461,1887.8388,1887.9195,-0.0807,169,183,0,R,HPYFYAPELLYYANK,Y,"",,,
+1,"ALBU_BOVIN","Albumin OS=Bos taurus OX=9913 GN=ALB PE=1 SV=4",193,70,2.9e-14,71244,21,23,-1,,,,1907.8384,1906.8311,1906.9135,-0.0824,529,544,0,K,LFTFHADICTLPDTEK,Q,"",,,
+1,"ALBU_BOVIN","Albumin OS=Bos taurus OX=9913 GN=ALB PE=1 SV=4",193,70,2.9e-14,71244,21,25,-1,,,,2044.9446,2043.9373,2044.0206,-0.0833,168,183,1,R,RHPYFYAPELLYYANK,Y,"",,,
+1,"ALBU_BOVIN","Albumin OS=Bos taurus OX=9913 GN=ALB PE=1 SV=4",193,70,2.9e-14,71244,21,26,-1,,,,2045.2673,2044.2600,2044.0206,0.2393,168,183,1,R,RHPYFYAPELLYYANK,Y,"",,,
+1,"ALBU_BOVIN","Albumin OS=Bos taurus OX=9913 GN=ALB PE=1 SV=4",193,70,2.9e-14,71244,21,27,-1,,,,2458.0807,2457.0734,2457.1733,-0.0999,319,340,1,K,DAIPENLPPLTADFAEDKDVCK,N,"",,,
+2,"CCNB2_ORYCU","G2/mitotic-specific cyclin-B2 OS=Oryzias curvinotus OX=104658 GN=ccnb2 PE=2 SV=1",54,70,2,43607,7,2,-1,,,,927.4696,926.4624,926.5073,-0.0449,380,388,0,K,ALAESLLNP,-,"",,,
+2,"CCNB2_ORYCU","G2/mitotic-specific cyclin-B2 OS=Oryzias curvinotus OX=104658 GN=ccnb2 PE=2 SV=1",54,70,2,43607,7,3,-1,,,,927.6858,926.6785,926.5549,0.1236,51,59,1,K,VGPSKKPSK,A,"",,,
+2,"CCNB2_ORYCU","G2/mitotic-specific cyclin-B2 OS=Oryzias curvinotus OX=104658 GN=ccnb2 PE=2 SV=1",54,70,2,43607,7,5,-1,,,,1399.6312,1398.6239,1398.8082,-0.1843,367,379,0,K,ISLIPQLNSSTVK,A,"",,,
+2,"CCNB2_ORYCU","G2/mitotic-specific cyclin-B2 OS=Oryzias curvinotus OX=104658 GN=ccnb2 PE=2 SV=1",54,70,2,43607,7,11,-1,,,,1502.5542,1501.5470,1501.8360,-0.2891,199,212,0,K,LQLVGVTAMLVACK,Y,"",,,
+2,"CCNB2_ORYCU","G2/mitotic-specific cyclin-B2 OS=Oryzias curvinotus OX=104658 GN=ccnb2 PE=2 SV=1",54,70,2,43607,7,19,-1,,,,1747.6305,1746.6232,1746.7817,-0.1585,144,157,1,R,ANYMQGYEVTERMR,A,"",,,
+2,"CCNB2_ORYCU","G2/mitotic-specific cyclin-B2 OS=Oryzias curvinotus OX=104658 GN=ccnb2 PE=2 SV=1",54,70,2,43607,7,21,-1,,,,1880.8361,1879.8288,1880.0785,-0.2497,247,262,0,R,SLSFQLGRPLPLHFLR,R,"",,,
+2,"CCNB2_ORYCU","G2/mitotic-specific cyclin-B2 OS=Oryzias curvinotus OX=104658 GN=ccnb2 PE=2 SV=1",54,70,2,43607,7,24,-1,,,,2029.9263,2028.9190,2029.0632,-0.1442,128,143,1,K,DIYKYLHVLEEQQPVR,A,"",,,

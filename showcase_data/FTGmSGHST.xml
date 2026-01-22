@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mascot_search_results xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.matrixscience.com/xmlns/schema/mascot_search_results_2" xsi:schemaLocation="http://www.matrixscience.com/xmlns/schema/mascot_search_results_2 https://www.matrixscience.com/xmlns/schema/mascot_search_results_2/mascot_search_results_2.xsd"  majorVersion="2" minorVersion="8">
+<header>
+<COM>0_C4_Spectrum</COM>
+<Date>2026-01-22T18:11:54Z</Date>
+<USERNAME>Paul</USERNAME>
+<USEREMAIL>pa.paerschke@gmail.com</USEREMAIL>
+<URI>https://www.matrixscience.com/cgi/master_results.pl?file=../data/20260122/FTGmSGHST.msr</URI>
+<FILENAME />
+<FORMAT>Mascot generic</FORMAT>
+<SEARCH>PMF</SEARCH>
+<MascotVer>3.0.0</MascotVer>
+<DB>SwissProt</DB>
+<FastaVer>SwissProt_2025_04.fasta</FastaVer>
+<NumSeqs>573661</NumSeqs>
+<NumResidues>207922125</NumResidues>
+<NumSeqsAfterTax>573661</NumSeqsAfterTax>
+<NumQueries>28</NumQueries>
+</header>
+<fixed_mods>
+<modification identifier="1">
+<name>Carbamidomethyl (C)</name>
+<delta>57.021464</delta>
+</modification>
+</fixed_mods>
+<variable_mods>
+<modification identifier="1">
+<name>Oxidation (M)</name>
+<delta>15.994915</delta>
+<neutral_loss identifier="1">0</neutral_loss>
+<neutral_loss identifier="2">63.998285</neutral_loss>
+</modification>
+</variable_mods>
+<search_parameters>
+<TAXONOMY>All entries</TAXONOMY>
+<CLE>Trypsin</CLE>
+<PFA>1</PFA>
+<MODS>Carbamidomethyl (C),</MODS>
+<IT_MODS>Oxidation (M),</IT_MODS>
+<TOL>200</TOL>
+<TOLU>ppm</TOLU>
+<CHARGE>1+</CHARGE>
+<MASS>Monoisotopic</MASS>
+<DECOY>0</DECOY>
+</search_parameters>
+<format_parameters>
+<sigthreshold>0.05</sigthreshold>
+<REPORT>0</REPORT>
+<min_num_sig_unique_seqs>1</min_num_sig_unique_seqs>
+<show_same_sets>0</show_same_sets>
+<showsubsets>0</showsubsets>
+<show_pep_dupes>1</show_pep_dupes>
+</format_parameters>
+<hits>
+<hit number="1">
+<protein accession="ALBU_BOVIN">
+<prot_desc>Albumin OS=Bos taurus OX=9913 GN=ALB PE=1 SV=4</prot_desc>
+<prot_score>193</prot_score>
+<prot_thresh>70</prot_thresh>
+<prot_expect>2.9e-14</prot_expect>
+<prot_mass>71244</prot_mass>
+<prot_matches>21</prot_matches>
+<peptide query="1">
+<pep_exp_mz>752.3513</pep_exp_mz>
+<pep_exp_mr>751.3441</pep_exp_mr>
+<pep_calc_mr>751.3500</pep_calc_mr>
+<pep_delta>-0.0060</pep_delta>
+<pep_start>341</pep_start>
+<pep_end>346</pep_end>
+<pep_miss>0</pep_miss>
+<pep_res_before>K</pep_res_before>
+<pep_seq>NYQEAK</pep_seq>
+<pep_res_after>D</pep_res_after>
+<pep_var_mod />
+<pep_var_mod_pos />
+<pep_summed_mod_pos />
+<pep_local_mod_pos />
+</peptide>
+<peptide query="2">
+<pep_exp_mz>927.4696</pep_exp_mz>
+<pep_exp_mr>926.4624</pep_exp_mr>
+<pep_calc_mr>926.4861</pep_calc_mr>
+<pep_delta>-0.0238</pep_delta>
+<pep_start>161</pep_start>
+<pep_end>167</pep_end>
+<pep_miss>0</pep_miss>
+<pep_res_before>K</pep_res_before>
+<pep_seq>YLYEIAR</pep_seq>
+<pep_res_after>R</pep_res_after>
+<pep_var_mod />
+<pep_var_mod_pos />
+<pep_summed_mod_pos />
+<pep_local_mod_pos />
+</peptide>
+<peptide query="4">
+<pep_exp_mz>1305.6617</pep_exp_mz>
+<pep_exp_mr>1304.6544</pep_exp_mr>
+<pep_calc_mr>1304.7088</pep_calc_mr>
+<pep_delta>-0.0544</pep_delta>
+<pep_start>402</pep_start>
+<pep_end>412</pep_end>
+<pep_miss>0</pep_miss>
+<pep_res_before>K</pep_res_before>
+<pep_seq>HLVDEPQNLIK</pep_seq>
+<pep_res_after>Q</pep_res_after>
+<pep_var_mod />
+<pep_var_mod_pos />
+<pep_summed_mod_pos />
+<pep_local_mod_pos />
+</peptide>
+<peptide query="5">
+<pep_exp_mz>1399.6312</pep_exp_mz>
+<pep_exp_mr>1398.6239</pep_exp_mr>
+<pep_calc_mr>1398.6853</pep_calc_mr>
+<pep_delta>-0.0615</pep_delta>
+<pep_start>569</pep_start>
+<pep_end>580</pep_end>
+<pep_miss>0</pep_miss>
+<pep_res_before>K</pep_res_before>
+<pep_seq>TVMENFVAFVDK</pep_seq>
+<pep_res_after>C</pep_res_after>
+<pep_var_mod />
+<pep_var_mod_pos />
+<pep_summed_mod_pos />
+<pep_local_mod_pos />
+</peptide>
+<peptide query="6">
+<pep_exp_mz>1419.6316</pep_exp_mz>
+<pep_exp_mr>1418.6244</pep_exp_mr>
+<pep_calc_mr>1418.6864</pep_calc_mr>
+<pep_delta>-0.0620</pep_delta>
+<pep_start>89</pep_start>
+<pep_end>100</pep_end>
+<pep_miss>0</pep_miss>
+<pep_res_before>K</pep_res_before>
+<pep_seq>SLHTLFGDELCK</pep_seq>
+<pep_res_after>V</pep_res_after>
+<pep_var_mod />
+<pep_var_mod_pos />
+<pep_summed_mod_pos />
+<pep_local_mod_pos />
+</peptide>
+<peptide query="7">
+<pep_exp_mz>1439.7465</pep_exp_mz>
+<pep_exp_mr>1438.7392</pep_exp_mr>
+<pep_calc_mr>1438.8045</pep_calc_mr>
+<pep_delta>-0.0652</pep_delta>
+<pep_start>360</pep_start>
+<pep_end>371</pep_end>
+<pep_miss>1</pep_miss>
+<pep_res_before>R</pep_res_before>
+<pep_seq>RHPEYAVSVLLR</pep_seq>
+<pep_res_after>L</pep_res_after>
+<pep_var_mod />
+<pep_var_mod_pos />
+<pep_summed_mod_pos />
+<pep_local_mod_pos />
+</peptide>
+<peptide query="8">
+<pep_exp_mz>1479.7300</pep_exp_mz>
+<pep_exp_mr>1478.7227</pep_exp_mr>
+<pep_calc_mr>1478.7881</pep_calc_mr>
+<pep_delta>-0.0654</pep_delta>
+<pep_start>421</pep_start>
+<pep_end>433</pep_end>
+<pep_miss>0</pep_miss>
+<pep_res_before>K</pep_res_before>
+<pep_seq>LGEYGFQNALIVR</pep_seq>
+<pep_res_after>Y</pep_res_after>
+<pep_var_mod />
+<pep_var_mod_pos />
+<pep_summed_mod_pos />
+<pep_local_mod_pos />
+</peptide>
+<peptide query="9">
+<pep_exp_mz>1480.0035</pep_exp_mz>
+<pep_exp_mr>1478.9962</pep_exp_mr>
+<pep_calc_mr>1478.7881</pep_calc_mr>
+<pep_delta>0.2080</pep_delta>
+<pep_start>421</pep_start>
+<pep_end>433</pep_end>
+<pep_miss>0</pep_miss>
+<pep_res_before>K</pep_res_before>
+<pep_seq>LGEYGFQNALIVR</pep_seq>
+<pep_res_after>Y</pep_res_after>
+<pep_var_mod />
+<pep_var_mod_pos />
+<pep_summed_mod_pos />
+<pep_local_mod_pos />
+</peptide>
+<peptide query="11">
+<pep_exp_mz>1502.5542</pep_exp_mz>
+<pep_exp_mr>1501.5470</pep_exp_mr>
+<pep_calc_mr>1501.6065</pep_calc_mr>
+<pep_delta>-0.0595</pep_delta>
+<pep_start>375</pep_start>
+<pep_end>386</pep_end>
+<pep_miss>0</pep_miss>
+<pep_res_before>K</pep_res_before>
+<pep_seq>EYEATLEECCAK</pep_seq>
+<pep_res_after>D</pep_res_after>
+<pep_var_mod />
+<pep_var_mod_pos />
+<pep_summed_mod_pos />
+<pep_local_mod_pos />
+</peptide>
+<peptide query="13">
+<pep_exp_mz>1554.5967</pep_exp_mz>
+<pep_exp_mr>1553.5894</pep_exp_mr>
+<pep_calc_mr>1553.6457</pep_calc_mr>
+<pep_delta>-0.0563</pep_delta>
+<pep_start>387</pep_start>
+<pep_end>399</pep_end>
+<pep_miss>0</pep_miss>
+<pep_res_before>K</pep_res_before>
+<pep_seq>DDPHACYSTVFDK</pep_seq>
+<pep_res_after>L</pep_res_after>
+<pep_var_mod />
+<pep_var_mod_pos />
+<pep_summed_mod_pos />
+<pep_local_mod_pos />
+</peptide>
+<peptide query="14">
+<pep_exp_mz>1567.6757</pep_exp_mz>
+<pep_exp_mr>1566.6685</pep_exp_mr>
+<pep_calc_mr>1566.7354</pep_calc_mr>
+<pep_delta>-0.0670</pep_delta>
+<pep_start>347</pep_start>
+<pep_end>359</pep_end>
+<pep_miss>0</pep_miss>
+<pep_res_before>K</pep_res_before>
+<pep_seq>DAFLGSFLYEYSR</pep_seq>
+<pep_res_after>R</pep_res_after>
+<pep_var_mod />
+<pep_var_mod_pos />
+<pep_summed_mod_pos />
+<pep_local_mod_pos />
+</peptide>
+<peptide query="15">
+<pep_exp_mz>1567.9569</pep_exp_mz>
+<pep_exp_mr>1566.9496</pep_exp_mr>
+<pep_calc_mr>1566.7354</pep_calc_mr>
+<pep_delta>0.2141</pep_delta>
+<pep_start>347</pep_start>
+<pep_end>359</pep_end>
+<pep_miss>0</pep_miss>
+<pep_res_before>K</pep_res_before>
+<pep_seq>DAFLGSFLYEYSR</pep_seq>
+<pep_res_after>R</pep_res_after>
+<pep_var_mod />
+<pep_var_mod_pos />
+<pep_summed_mod_pos />
+<pep_local_mod_pos />
+</peptide>
+<peptide query="16">
+<pep_exp_mz>1639.8664</pep_exp_mz>
+<pep_exp_mr>1638.8591</pep_exp_mr>
+<pep_calc_mr>1638.9305</pep_calc_mr>
+<pep_delta>-0.0714</pep_delta>
+<pep_start>437</pep_start>
+<pep_end>451</pep_end>
+<pep_miss>1</pep_miss>
+<pep_res_before>R</pep_res_before>
+<pep_seq>KVPQVSTPTLVEVSR</pep_seq>
+<pep_res_after>S</pep_res_after>
+<pep_var_mod />
+<pep_var_mod_pos />
+<pep_summed_mod_pos />
+<pep_local_mod_pos />
+</peptide>
+<peptide query="17">
+<pep_exp_mz>1724.7552</pep_exp_mz>
+<pep_exp_mr>1723.7479</pep_exp_mr>
+<pep_calc_mr>1723.8273</pep_calc_mr>
+<pep_delta>-0.0794</pep_delta>
+<pep_start>469</pep_start>
+<pep_end>482</pep_end>
+<pep_miss>0</pep_miss>
+<pep_res_before>R</pep_res_before>
+<pep_seq>MPCTEDYLSLILNR</pep_seq>
+<pep_res_after>L</pep_res_after>
+<pep_var_mod />
+<pep_var_mod_pos />
+<pep_summed_mod_pos />
+<pep_local_mod_pos />
+</peptide>
+<peptide query="19">
+<pep_exp_mz>1747.6305</pep_exp_mz>
+<pep_exp_mr>1746.6232</pep_exp_mr>
+<pep_calc_mr>1746.6978</pep_calc_mr>
+<pep_delta>-0.0746</pep_delta>
+<pep_start>184</pep_start>
+<pep_end>197</pep_end>
+<pep_miss>0</pep_miss>
+<pep_res_before>K</pep_res_before>
+<pep_seq>YNGVFQECCQAEDK</pep_seq>
+<pep_res_after>G</pep_res_after>
+<pep_var_mod />
+<pep_var_mod_pos />
+<pep_summed_mod_pos />
+<pep_local_mod_pos />
+</peptide>
+<peptide query="21">
+<pep_exp_mz>1880.8361</pep_exp_mz>
+<pep_exp_mr>1879.8288</pep_exp_mr>
+<pep_calc_mr>1879.9138</pep_calc_mr>
+<pep_delta>-0.0850</pep_delta>
+<pep_start>508</pep_start>
+<pep_end>523</pep_end>
+<pep_miss>0</pep_miss>
+<pep_res_before>R</pep_res_before>
+<pep_seq>RPCFSALTPDETYVPK</pep_seq>
+<pep_res_after>A</pep_res_after>
+<pep_var_mod />
+<pep_var_mod_pos />
+<pep_summed_mod_pos />
+<pep_local_mod_pos />
+</peptide>
+<peptide query="22">
+<pep_exp_mz>1888.8461</pep_exp_mz>
+<pep_exp_mr>1887.8388</pep_exp_mr>
+<pep_calc_mr>1887.9195</pep_calc_mr>
+<pep_delta>-0.0807</pep_delta>
+<pep_start>169</pep_start>
+<pep_end>183</pep_end>
+<pep_miss>0</pep_miss>
+<pep_res_before>R</pep_res_before>
+<pep_seq>HPYFYAPELLYYANK</pep_seq>
+<pep_res_after>Y</pep_res_after>
+<pep_var_mod />
+<pep_var_mod_pos />
+<pep_summed_mod_pos />
+<pep_local_mod_pos />
+</peptide>
+<peptide query="23">
+<pep_exp_mz>1907.8384</pep_exp_mz>
+<pep_exp_mr>1906.8311</pep_exp_mr>
+<pep_calc_mr>1906.9135</pep_calc_mr>
+<pep_delta>-0.0824</pep_delta>
+<pep_start>529</pep_start>
+<pep_end>544</pep_end>
+<pep_miss>0</pep_miss>
+<pep_res_before>K</pep_res_before>
+<pep_seq>LFTFHADICTLPDTEK</pep_seq>
+<pep_res_after>Q</pep_res_after>
+<pep_var_mod />
+<pep_var_mod_pos />
+<pep_summed_mod_pos />
+<pep_local_mod_pos />
+</peptide>
+<peptide query="25">
+<pep_exp_mz>2044.9446</pep_exp_mz>
+<pep_exp_mr>2043.9373</pep_exp_mr>
+<pep_calc_mr>2044.0206</pep_calc_mr>
+<pep_delta>-0.0833</pep_delta>
+<pep_start>168</pep_start>
+<pep_end>183</pep_end>
+<pep_miss>1</pep_miss>
+<pep_res_before>R</pep_res_before>
+<pep_seq>RHPYFYAPELLYYANK</pep_seq>
+<pep_res_after>Y</pep_res_after>
+<pep_var_mod />
+<pep_var_mod_pos />
+<pep_summed_mod_pos />
+<pep_local_mod_pos />
+</peptide>
+<peptide query="26">
+<pep_exp_mz>2045.2673</pep_exp_mz>
+<pep_exp_mr>2044.2600</pep_exp_mr>
+<pep_calc_mr>2044.0206</pep_calc_mr>
+<pep_delta>0.2393</pep_delta>
+<pep_start>168</pep_start>
+<pep_end>183</pep_end>
+<pep_miss>1</pep_miss>
+<pep_res_before>R</pep_res_before>
+<pep_seq>RHPYFYAPELLYYANK</pep_seq>
+<pep_res_after>Y</pep_res_after>
+<pep_var_mod />
+<pep_var_mod_pos />
+<pep_summed_mod_pos />
+<pep_local_mod_pos />
+</peptide>
+<peptide query="27">
+<pep_exp_mz>2458.0807</pep_exp_mz>
+<pep_exp_mr>2457.0734</pep_exp_mr>
+<pep_calc_mr>2457.1733</pep_calc_mr>
+<pep_delta>-0.0999</pep_delta>
+<pep_start>319</pep_start>
+<pep_end>340</pep_end>
+<pep_miss>1</pep_miss>
+<pep_res_before>K</pep_res_before>
+<pep_seq>DAIPENLPPLTADFAEDKDVCK</pep_seq>
+<pep_res_after>N</pep_res_after>
+<pep_var_mod />
+<pep_var_mod_pos />
+<pep_summed_mod_pos />
+<pep_local_mod_pos />
+</peptide>
+</protein>
+</hit>
+<hit number="2">
+<protein accession="CCNB2_ORYCU">
+<prot_desc>G2/mitotic-specific cyclin-B2 OS=Oryzias curvinotus OX=104658 GN=ccnb2 PE=2 SV=1</prot_desc>
+<prot_score>54</prot_score>
+<prot_thresh>70</prot_thresh>
+<prot_expect>2</prot_expect>
+<prot_mass>43607</prot_mass>
+<prot_matches>7</prot_matches>
+<peptide query="2">
+<pep_exp_mz>927.4696</pep_exp_mz>
+<pep_exp_mr>926.4624</pep_exp_mr>
+<pep_calc_mr>926.5073</pep_calc_mr>
+<pep_delta>-0.0449</pep_delta>
+<pep_start>380</pep_start>
+<pep_end>388</pep_end>
+<pep_miss>0</pep_miss>
+<pep_res_before>K</pep_res_before>
+<pep_seq>ALAESLLNP</pep_seq>
+<pep_res_after>-</pep_res_after>
+<pep_var_mod />
+<pep_var_mod_pos />
+<pep_summed_mod_pos />
+<pep_local_mod_pos />
+</peptide>
+<peptide query="3">
+<pep_exp_mz>927.6858</pep_exp_mz>
+<pep_exp_mr>926.6785</pep_exp_mr>
+<pep_calc_mr>926.5549</pep_calc_mr>
+<pep_delta>0.1236</pep_delta>
+<pep_start>51</pep_start>
+<pep_end>59</pep_end>
+<pep_miss>1</pep_miss>
+<pep_res_before>K</pep_res_before>
+<pep_seq>VGPSKKPSK</pep_seq>
+<pep_res_after>A</pep_res_after>
+<pep_var_mod />
+<pep_var_mod_pos />
+<pep_summed_mod_pos />
+<pep_local_mod_pos />
+</peptide>
+<peptide query="5">
+<pep_exp_mz>1399.6312</pep_exp_mz>
+<pep_exp_mr>1398.6239</pep_exp_mr>
+<pep_calc_mr>1398.8082</pep_calc_mr>
+<pep_delta>-0.1843</pep_delta>
+<pep_start>367</pep_start>
+<pep_end>379</pep_end>
+<pep_miss>0</pep_miss>
+<pep_res_before>K</pep_res_before>
+<pep_seq>ISLIPQLNSSTVK</pep_seq>
+<pep_res_after>A</pep_res_after>
+<pep_var_mod />
+<pep_var_mod_pos />
+<pep_summed_mod_pos />
+<pep_local_mod_pos />
+</peptide>
+<peptide query="11">
+<pep_exp_mz>1502.5542</pep_exp_mz>
+<pep_exp_mr>1501.5470</pep_exp_mr>
+<pep_calc_mr>1501.8360</pep_calc_mr>
+<pep_delta>-0.2891</pep_delta>
+<pep_start>199</pep_start>
+<pep_end>212</pep_end>
+<pep_miss>0</pep_miss>
+<pep_res_before>K</pep_res_before>
+<pep_seq>LQLVGVTAMLVACK</pep_seq>
+<pep_res_after>Y</pep_res_after>
+<pep_var_mod />
+<pep_var_mod_pos />
+<pep_summed_mod_pos />
+<pep_local_mod_pos />
+</peptide>
+<peptide query="19">
+<pep_exp_mz>1747.6305</pep_exp_mz>
+<pep_exp_mr>1746.6232</pep_exp_mr>
+<pep_calc_mr>1746.7817</pep_calc_mr>
+<pep_delta>-0.1585</pep_delta>
+<pep_start>144</pep_start>
+<pep_end>157</pep_end>
+<pep_miss>1</pep_miss>
+<pep_res_before>R</pep_res_before>
+<pep_seq>ANYMQGYEVTERMR</pep_seq>
+<pep_res_after>A</pep_res_after>
+<pep_var_mod />
+<pep_var_mod_pos />
+<pep_summed_mod_pos />
+<pep_local_mod_pos />
+</peptide>
+<peptide query="21">
+<pep_exp_mz>1880.8361</pep_exp_mz>
+<pep_exp_mr>1879.8288</pep_exp_mr>
+<pep_calc_mr>1880.0785</pep_calc_mr>
+<pep_delta>-0.2497</pep_delta>
+<pep_start>247</pep_start>
+<pep_end>262</pep_end>
+<pep_miss>0</pep_miss>
+<pep_res_before>R</pep_res_before>
+<pep_seq>SLSFQLGRPLPLHFLR</pep_seq>
+<pep_res_after>R</pep_res_after>
+<pep_var_mod />
+<pep_var_mod_pos />
+<pep_summed_mod_pos />
+<pep_local_mod_pos />
+</peptide>
+<peptide query="24">
+<pep_exp_mz>2029.9263</pep_exp_mz>
+<pep_exp_mr>2028.9190</pep_exp_mr>
+<pep_calc_mr>2029.0632</pep_calc_mr>
+<pep_delta>-0.1442</pep_delta>
+<pep_start>128</pep_start>
+<pep_end>143</pep_end>
+<pep_miss>1</pep_miss>
+<pep_res_before>K</pep_res_before>
+<pep_seq>DIYKYLHVLEEQQPVR</pep_seq>
+<pep_res_after>A</pep_res_after>
+<pep_var_mod />
+<pep_var_mod_pos />
+<pep_summed_mod_pos />
+<pep_local_mod_pos />
+</peptide>
+</protein>
+</hit>
+</hits>
+</mascot_search_results>

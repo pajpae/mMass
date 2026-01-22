@@ -13,7 +13,7 @@ from mspy import obj_peaklist
 # PARSE CSV RESULTS
 # --------------
 
-class csvResults:
+class resultsCsv:
     """Parse results from csv."""
 
     def __init__(self,path):

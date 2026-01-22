@@ -47,3 +47,5 @@ from .parser_mzdata import parseMZDATA
 from .parser_mzml import parseMZML
 from .parser_mgf import parseMGF
 from .parser_fasta import parseFASTA
+from .results_xml import resultsXml
+from .results_csv import resultsCsv

@@ -35,9 +35,6 @@ import wx
 import wx.aui
 import numpy
 
-import csv_results
-import xml_results
-
 # load modules
 from .ids import *
 from . import mwx
@@ -3415,7 +3412,7 @@ class mainFrame(wx.Frame):
             lastDir = ""
             if os.path.exists(config.main["lastDir"]):
                 lastDir = config.main["lastDir"]
-            wildcard = "All supported formats|fid;*.msd;*.baf;*.yep;*.mzData;*.mzdata*;*.mzXML;*.mzxml;*.mzML;*.mzml;*.xml;*.XML;*.mgf;*.MGF;*.txt;*.xy;*.asc|All files|*.*"
+            wildcard = "All supported formats|*.csv;*.fid;*.msd;*.baf;*.yep;*.mzData;*.mzdata*;*.mzXML;*.mzxml;*.mzML;*.mzml;*.xml;*.XML;*.mgf;*.MGF;*.txt;*.xy;*.asc|All files|*.*"
             dlg = wx.FileDialog(
                 self,
                 "Open Document",
@@ -3469,7 +3466,7 @@ class mainFrame(wx.Frame):
             wx.Bell()
             dlg = mwx.dlgMessage(
                 self,
-                title="Document doesn't exists.",
+                title="Document doesn't exist.",
                 message="Specified document path cannot be found or is temporarily\nunavailable.",
             )
             dlg.ShowModal()
@@ -3504,19 +3501,21 @@ class mainFrame(wx.Frame):
     def runResultParser(self, path, docType):
         """Load result document."""
 
-        document = False
         results = False
 
         # get data
         if docType == "xml":
-            parser = xml_results.xmlResults(path)
+            parser = mspy.resultsXml(path)
             results = parser.getResults()
         
         elif docType == "csv":
-            parser = csv_results.xmlResults(path)
+            parser = mspy.resultsCsv(path)
             results = parser.getResults()
         
-        return results
+        if results:
+            return results
+        else:
+            raise Exception()
 
     # ----
 
