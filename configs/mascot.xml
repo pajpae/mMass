@@ -2,6 +2,7 @@
 <mMassMascot version="1.0">
 
    <server name="Matrix Science">
+     <param name="protocol" value="http" type="unicode" />
      <param name="host" value="www.matrixscience.com" type="unicode" />
      <param name="path" value="/" type="unicode" />
      <param name="search" value="cgi/nph-mascot.exe" type="unicode" />

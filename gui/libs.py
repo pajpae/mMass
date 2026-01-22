@@ -792,7 +792,7 @@ def loadMascot(
             name = serverTag.getAttribute("name")
             container[name] = {
                 "protocol": "http",
-                "host": "",
+                "host": "www.matrixscience.com",
                 "path": "/",
                 "search": "cgi/nph-mascot.exe",
                 "results": "cgi/master_results.pl",
