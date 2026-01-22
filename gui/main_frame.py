@@ -2749,7 +2749,7 @@ class mainFrame(wx.Frame):
             if "resol" in columns:
                 config.main["peaklistColumns"].append("resol")
             if "pepseq" in columns:
-                config.main["peaklistColumes"].append("pepSeq")
+                config.main["peaklistColumns"].append("pepSeq")
             if "group" in columns:
                 config.main["peaklistColumns"].append("group")
         else:
@@ -3431,6 +3431,10 @@ class mainFrame(wx.Frame):
             else:
                 dlg.Destroy()
                 return
+        
+        # import results in queue
+        self.importResultsQueue()
+    
     
     # ----
     def importResultsQueue(self):
@@ -3490,8 +3494,10 @@ class mainFrame(wx.Frame):
 
         # append results to active peaklist
         if results:
-            pass
-
+            self.appendResults(results)
+            self.peaklistPanel.updatePeakList()
+        else: 
+            return
     
     # ----
 
@@ -3512,6 +3518,20 @@ class mainFrame(wx.Frame):
         
         return results
 
+    # ----
+
+    def appendResults(self, results):
+        """Append results to current peaklist."""
+
+        # get peaklist
+        peaklist = self.documents[self.currentDocument].spectrum.peaklist
+
+        # peaks from results to peaklist
+        for resPeak in results:
+            for peak in peaklist:
+                if round(peak.mz, 4) == resPeak.mz:
+                    peak.pepSeq = resPeak.pepSeq
+                    break
 
     # ----
 

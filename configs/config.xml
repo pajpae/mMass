@@ -13,19 +13,19 @@
     <param name="reverseScrolling" value="0" type="int" />
     <param name="macListCtrlGeneric" value="1" type="int" />
     <param name="cursorInfo" value="mz;dist;ppm;z" type="str" />
-    <param name="peaklistColumns" value="mz;int;rel;sn;z;fwhm;resol" type="str" />
+    <param name="peaklistColumns" value="mz;int;rel;sn;z;fwhm;resol;pepSeq" type="str" />
     <param name="mzDigits" value="4" type="int" />
     <param name="intDigits" value="0" type="int" />
     <param name="ppmDigits" value="1" type="int" />
     <param name="chargeDigits" value="2" type="int" />
-    <param name="lastDir" value="" type="unicode" />
+    <param name="lastDir" value="C:\Users\ppaer\Desktop\Uni\Uni\Biotechnologie Master\Biotechnologie Semester 2\WSD\python_projects\tryptic_digest_project\data\mgf_data" type="unicode" />
     <param name="lastSeqDir" value="" type="unicode" />
     <param name="errorUnits" value="Da" type="str" />
     <param name="printQuality" value="5" type="int" />
     <param name="useServer" value="1" type="int" />
     <param name="serverPort" value="65456" type="int" />
     <param name="updatesEnabled" value="1" type="int" />
-    <param name="updatesChecked" value="20260113" type="str" />
+    <param name="updatesChecked" value="20260121" type="str" />
     <param name="updatesCurrent" value="6.0.2" type="str" />
     <param name="updatesAvailable" value="6.0.2" type="str" />
     <param name="compassMode" value="Profile" type="str" />
