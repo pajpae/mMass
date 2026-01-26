@@ -8,6 +8,7 @@ Changes made to the program:
 2. Fixed problems in both the parsers for reading .mzxml and .mgf input.
 3. Added a function to read .csv and .xml result files generated after Mascot PMF search and appending the peptide sequences to the peaks that were able to be matched.
 
+Changes made to mMass can be tracked in the branch private_testing, which we used for this project.
 ##
 
 Instructions for result reading:  
