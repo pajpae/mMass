@@ -3526,11 +3526,22 @@ class mainFrame(wx.Frame):
         peaklist = self.documents[self.currentDocument].spectrum.peaklist
 
         # peaks from results to peaklist
+        hasMatch = False
         for resPeak in results:
             for peak in peaklist:
                 if round(peak.mz, 4) == resPeak.mz:
                     peak.pepSeq = resPeak.pepSeq
+                    hasMatch = True
                     break
+        
+        if not hasMatch:
+            dlg = mwx.dlgMessage(
+                self,
+                title="No matches found.",
+                message="The matched peaks from the results file has no matches for the current peaklist. Are you sure you chose the right results?",
+            )
+            dlg.ShowModal()
+            dlg.Destroy()
 
     # ----
 
