@@ -31,8 +31,10 @@ class resultsXml:
     def getResults(self):
         tree = ET.parse(self.path)
         root = tree.getroot()
+        # initialize lists for masses and sequences of the matched peaks
         masses = []
         seqs = []
+        # search the xml tree for protein hit 1
         for child in root:
             if "hits" in child.tag:
                 for hit in child:
@@ -40,6 +42,7 @@ class resultsXml:
                         if int(hit.get('number')) == 1:
                             for protein in hit:
                                 for item in protein.iter():
+                                    # add peptide masses and sequences to lists
                                     if "pep_exp_mz" in item.tag:
                                         mass = float(item.text)
                                         masses.append(mass)
@@ -47,7 +50,9 @@ class resultsXml:
                                         seq = item.text
                                         seqs.append(seq)
         counter = 0
+        # initialize empty list of peaks
         peaks=[]
+        # create peaks and peaklist
         for mass in masses:
             peak = obj_peak.peak(mass, pepSeq= seqs[counter])
             peaks.append(peak)
