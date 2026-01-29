@@ -1,4 +1,4 @@
-The additions made here to mMass were done as part of the WSD - Software Development course at the Berliner Hochschule für Technik in the winter semester 25/26.  
+The additions made here to mMass were done as part of the WSD - Software Development course in the Biotechnolgie (M. Sc.) program at the Berliner Hochschule für Technik in the winter semester 25/26.  
 Programming was performed by Valentin Bassé and Paul Pärschke of student group 4.
 
 ##
